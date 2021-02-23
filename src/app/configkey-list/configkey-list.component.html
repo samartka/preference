@@ -1,0 +1,6 @@
+<span class="container" style="display: inline-block; clear: both; width: 500px;">
+    <!-- {{titem.keys.length}} -->
+    <p *ngFor = "let k of titem.keys"> 
+        <app-config-key [cKey]="k"></app-config-key>
+    </p>
+</span>

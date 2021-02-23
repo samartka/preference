@@ -1,0 +1,12 @@
+<app-tab-menu (OnSelected)="selectedMenu($event)" ></app-tab-menu>
+
+<span style="display:  inline-block;">
+    <app-menulist [menuItem]="selectedTabItems" (onClicked)="selectedTabmenu($event)"> </app-menulist>
+</span>
+
+
+<app-configkey-list [titem]="selectedTabItem" style="width: 500px;clear: none; display: inline-block; vertical-align: top;">
+
+</app-configkey-list> 
+
+

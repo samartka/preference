@@ -1,0 +1,27 @@
+        <div class="container" style="width : 250px;">
+            
+            <div class="panel-group">
+
+                <span *ngFor = "let item of menuItem ; let k = index">
+                    <div class="panel panel-default" *ngIf = "item.pos == 'alone'" id={{k}}  >
+                        <div class="panel-heading" >
+                          <h4 class="panel-title">
+                            <a  *ngIf = "item.pos == 'alone'" id={{k}} data-toggle="collapse" href="#collapse1" (click)="onClick(k)">{{item.name}}</a>
+                          </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse" *ngFor = "let i of menuItem let m = index">
+                          <ul class="list-group">
+                            <span >
+                                <span>
+                                    <li *ngIf = "i.pos != 'alone' && i.group == item.name" id={{m}} class="list-group-item" (click)="onClick(m)"> 
+                                        <span><a href="#">{{i.name}}</a></span>  
+                                    </li>    
+            
+                                </span>
+                            </span>
+                          </ul>
+                        </div>
+                      </div>
+                </span>
+            </div>
+        </div>
